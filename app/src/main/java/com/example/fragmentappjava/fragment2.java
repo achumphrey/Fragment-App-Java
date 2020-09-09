@@ -63,7 +63,7 @@ public class fragment2 extends ListFragment {
         super.onListItemClick(l, v, position, id);
         fragment1 txt = (fragment1)getFragmentManager()
                 .findFragmentById(R.id.fragment1);
-        txt.chnage("APP: " + AndroidApps[position],
+        txt.change("APP: " + AndroidApps[position],
                 "Version: " + Descriptions[position]);
         getListView().setSelector(R.color.colorAccent);
     }

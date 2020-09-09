@@ -34,7 +34,7 @@ public class fragment1 extends Fragment {
         return view;
     }
 
-    public void chnage(String txt, String txt1){
+    public void change(String txt, String txt1){
         text.setText(txt);
         vers.setText(txt1);
     }
