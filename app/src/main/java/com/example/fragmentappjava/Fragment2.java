@@ -2,14 +2,11 @@ package com.example.fragmentappjava;
 
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -17,7 +14,7 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment2 extends ListFragment {
+public class Fragment2 extends ListFragment {
 
     String[] AndroidApps = new String[]{
           "Master Android App",
@@ -38,7 +35,7 @@ public class fragment2 extends ListFragment {
     };
 
 
-    public fragment2() {
+    public Fragment2() {
         // Required empty public constructor
     }
 
@@ -50,7 +47,7 @@ public class fragment2 extends ListFragment {
         View view = inflater.inflate(R.layout.fragment_fragment2,
                 container, false);
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(),
+        ArrayAdapter adapter = new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1, AndroidApps);
 
         setListAdapter(adapter);
@@ -59,12 +56,17 @@ public class fragment2 extends ListFragment {
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
+    public void onListItemClick(
+            ListView l,
+            View v,
+            int position,
+            long id) {
         super.onListItemClick(l, v, position, id);
-        fragment1 txt = (fragment1)getFragmentManager()
+
+        Fragment1 fragment1 = (Fragment1)getFragmentManager()
                 .findFragmentById(R.id.fragment1);
-        txt.change("APP: " + AndroidApps[position],
-                "Version: " + Descriptions[position]);
+        fragment1.change("APP: \n" + AndroidApps[position],
+                "Version: \n" + Descriptions[position]);
         getListView().setSelector(R.color.colorAccent);
     }
 }

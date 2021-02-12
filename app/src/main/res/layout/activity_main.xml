@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1.0"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
 
     <fragment
         android:id="@+id/fragment1"
-        class="com.example.fragmentappjava.fragment1"
+        class="com.example.fragmentappjava.Fragment1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
-        tools:layout="@layout/fragment_fragment1"
-        />
+        tools:layout="@layout/fragment_fragment1" />
 
     <fragment
         android:id="@+id/fragment2"
-        class="com.example.fragmentappjava.fragment2"
+        class="com.example.fragmentappjava.Fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
-        tools:layout="@layout/fragment_fragment2"
-        />
+        tools:layout="@layout/fragment_fragment2" />
 
 </LinearLayout>

@@ -14,11 +14,11 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment1 extends Fragment {
+public class Fragment1 extends Fragment {
 
     TextView text, vers;
 
-    public fragment1() {
+    public Fragment1() {
         // Required empty public constructor
     }
 
@@ -28,8 +28,8 @@ public class fragment1 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fragment1,
                 container, false);
-        text = (TextView)view.findViewById(R.id.AndroidApp);
-        vers = (TextView)view.findViewById(R.id.Description);
+        text = view.findViewById(R.id.AndroidApp);
+        vers = view.findViewById(R.id.Description);
 
         return view;
     }

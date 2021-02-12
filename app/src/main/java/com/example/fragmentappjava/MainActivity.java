@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fragment1, new fragment1())
+                .add(R.id.fragment1, new Fragment1())
                 .addToBackStack(null)
                 .commit();
     }
